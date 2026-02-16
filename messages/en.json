@@ -1,0 +1,471 @@
+{
+  "header": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "process": "Process",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "cta": "Free Diagnosis",
+    "menu": "Menu"
+  },
+  "hero": {
+    "eyebrow": "Digital Transformation for Local Businesses",
+    "title": "Digitalize your business with intelligent automation",
+    "subtitle": "We transform local businesses into client acquisition machines - no tech knowledge required",
+    "cta_primary": "Start Free Diagnosis",
+    "cta_secondary": "See How It Works",
+    "badge_satisfaction": "100% Satisfaction",
+    "badge_response": "Response <24h",
+    "badge_location": "Lisbon & Nationwide"
+  },
+  "problem": {
+    "title": "Do any of these sound familiar?",
+    "cards": {
+      "no_site": "I don't have a website",
+      "facebook": "Facebook doesn't bring clients",
+      "tech_fear": "Technology scares me",
+      "no_google": "I don't show up on Google",
+      "losing_clients": "I lose clients to competitors",
+      "manual_processes": "Manual processes consume time"
+    }
+  },
+  "solution": {
+    "title": "How Re-Evolution solves this",
+    "subtitle": "Complete digital presence solutions with automation included",
+    "learn_more": "Learn more",
+    "services": {
+      "landing_pages": {
+        "title": "Professional Landing Pages",
+        "description": "Modern responsive design, optimized for SEO and conversion, ultra-fast loading"
+      },
+      "automations": {
+        "title": "Intelligent Automations",
+        "description": "Processes that run by themselves using Make and Zapier, save time and gain efficiency"
+      },
+      "ai_assistants": {
+        "title": "AI Assistants",
+        "description": "Chatbots and virtual assistants that respond 24/7, automatically qualify leads"
+      },
+      "google_business": {
+        "title": "Google Business Setup",
+        "description": "Set up your Google Maps presence, appear in local searches in your area"
+      },
+      "email": {
+        "title": "Professional Email",
+        "description": "Email with your domain (name@yourbusiness.pt) for greater credibility"
+      },
+      "support": {
+        "title": "Continuous Support",
+        "description": "Maintenance, updates and constant evolution of your digital project"
+      }
+    }
+  },
+  "process": {
+    "title": "From contact to launch in 1-3 weeks",
+    "subtitle": "Simple and transparent process",
+    "steps": {
+      "diagnosis": {
+        "title": "Free Diagnosis",
+        "time": "0-24h",
+        "description": "We analyze your business, identify opportunities and specific needs"
+      },
+      "proposal": {
+        "title": "Custom Proposal",
+        "time": "48h",
+        "description": "We present a sample page, suggested automations and exact investment"
+      },
+      "development": {
+        "title": "Development",
+        "time": "1-2 weeks",
+        "description": "We build the site, configure automations and test everything before launch"
+      },
+      "launch": {
+        "title": "Launch",
+        "time": "D-Day",
+        "description": "We deliver the complete project and teach you how to use all features"
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Real Transformations",
+    "subtitle": "See some projects we've already developed",
+    "filters": {
+      "all": "All",
+      "restaurants": "Restaurants",
+      "professional": "Professional Services"
+    },
+    "problem_label": "Problem",
+    "solution_label": "Solution",
+    "result_label": "Result",
+    "view_details": "View Details",
+    "close": "Close",
+    "projects": {
+      "restaurant_a": {
+        "title": "Restaurant A",
+        "badge": "Traditional Restaurant",
+        "problem": "No online presence, losing tourist clients and reservations",
+        "solution": "Landing page + automatic menu via Google Sheets + WhatsApp reservation system (via Telegram)",
+        "result": "+40% reservations in 2 months",
+        "placeholder": "Screenshot Restaurant A - Replace with real image"
+      },
+      "restaurant_b": {
+        "title": "Restaurant B",
+        "badge": "Steakhouse",
+        "problem": "Outdated menu, clients didn't know specialties",
+        "solution": "Modern site + automatic menu update + Telegram → WhatsApp notifications for new orders",
+        "result": "60% reduction in menu management time",
+        "placeholder": "Screenshot Restaurant B - Replace with real image"
+      },
+      "lawyer": {
+        "title": "Lawyer X",
+        "badge": "Law Office",
+        "problem": "Unqualified leads, time wasted on consultations without potential",
+        "solution": "Professional website + automatic screening form + integrated scheduling",
+        "result": "70% more qualified leads, -50% screening time",
+        "placeholder": "Screenshot Lawyer X - Replace with real image"
+      }
+    }
+  },
+  "automations": {
+    "title": "See automations in action",
+    "subtitle": "Technology that works for you 24/7",
+    "highlight": "When a client fills out a form on your website, all of this happens automatically without you lifting a finger",
+    "flow": {
+      "form": "Website Form",
+      "make": "Make.com processes",
+      "email": "Automatic email sent",
+      "sheets": "Data saved to Google Sheets",
+      "telegram": "Telegram → WhatsApp notification"
+    }
+  },
+  "pricing": {
+    "title": "Transparent Investment",
+    "subtitle": "No hidden costs. No surprises.",
+    "most_popular": "Most Popular",
+    "one_time": "One-time investment",
+    "per_day": "~€1.43/day",
+    "per_month": "/month",
+    "setup_label": "Setup",
+    "contract": "12-month contract",
+    "view_all": "See Everything Included",
+    "hide_details": "Hide Details",
+    "compare": "Compare Packages",
+    "hide_compare": "Hide Comparison",
+    "guarantee_30": "30-day guarantee",
+    "guarantee_60": "60-day trial period",
+    "cta": "Get Started",
+    "cta_final": "Still have questions? Book a free call (30min)",
+    "addons_note": "Add-ons available: AI Chatbot, WhatsApp Business API, Advanced Reports",
+    "footnote_domain": "* Domain €12-15/year at your expense. Free hosting (Vercel).",
+    "plans": {
+      "essential": {
+        "name": "Essential Website",
+        "price": "300",
+        "tagline": "Complete Digital Presence",
+        "description": "For those who want a professional online presence with no monthly costs",
+        "features": [
+          "Professional landing page",
+          "SEO + Google Business",
+          "Email @yourdomain.pt",
+          "Essential automations (WhatsApp buttons, basic forms)",
+          "1 month support included"
+        ]
+      },
+      "managed": {
+        "name": "Managed Automation",
+        "price_setup": "800",
+        "price_monthly": "140",
+        "tagline": "Worry-Free Growth",
+        "description": "For businesses that want to automate and grow worry-free",
+        "includes": "Everything in Essential +",
+        "features": [
+          "3 complex automations",
+          "Domain + hosting included",
+          "Priority support",
+          "Monthly reports",
+          "2,500 operations/month included"
+        ]
+      }
+    },
+    "comparison": {
+      "rows": [
+        { "feature": "Initial investment", "essential": "€300", "managed": "€800" },
+        { "feature": "Monthly cost", "essential": "€0*", "managed": "€140" },
+        { "feature": "Professional landing", "essential": "✓", "managed": "✓" },
+        { "feature": "Basic SEO", "essential": "✓", "managed": "✓" },
+        { "feature": "Professional email", "essential": "✓", "managed": "✓" },
+        { "feature": "Simple automations", "essential": "✓", "managed": "✓" },
+        { "feature": "Complex automations", "essential": "✗", "managed": "3 included" },
+        { "feature": "Domain included", "essential": "✗", "managed": "✓" },
+        { "feature": "Ongoing support", "essential": "Ad-hoc paid", "managed": "✓ Priority" },
+        { "feature": "Monthly reports", "essential": "✗", "managed": "✓" },
+        { "feature": "Ideal for", "essential": "Basic presence", "managed": "Active growth" }
+      ],
+      "footnote": "* Domain €12-15/year (client responsibility)"
+    }
+  },
+  "credentials": {
+    "title": "Experience you can trust",
+    "subtitle": "Technical knowledge + business experience",
+    "formation_title": "Years of accumulated experience:",
+    "tech_title": "Technologies Used",
+    "formations": [
+      "Engineering",
+      "Digital Marketing & E-Commerce",
+      "UX/UI Design",
+      "Cybersecurity",
+      "Prompt Engineering",
+      "Web Design (HTML/CSS/JS/React/Python/PHP)"
+    ],
+    "technologies": {
+      "nextjs": "Next.js 15 - Modern React framework",
+      "tailwind": "Tailwind CSS - Design system",
+      "vercel": "Vercel - Ultra-fast hosting",
+      "cloudflare": "Cloudflare - DNS & security",
+      "make": "Make - Visual automations",
+      "zapier": "Zapier - Integrations",
+      "claude": "Claude Code - AI-assisted development",
+      "vscode": "VS Code - Development environment"
+    }
+  },
+  "testimonials": {
+    "title": "What our clients say",
+    "subtitle": "Real stories of digital transformation",
+    "items": [
+      {
+        "quote": "The website had a perfect fusion with my business. The automation works 24/7 and is a huge asset for attracting new clients.",
+        "name": "Verónica",
+        "role": "Beauty Salon Owner",
+        "initial": "V"
+      },
+      {
+        "quote": "Incredible professionalism from start to finish. The site looks amazing and the automations brought me many more qualified contacts.",
+        "name": "Paulo",
+        "role": "Auto Repair Shop Owner",
+        "initial": "P"
+      },
+      {
+        "quote": "I'm very proud of the result. My business now has an online presence with a quality I never imagined.",
+        "name": "Gisela",
+        "role": "Aesthetic Clinic Owner",
+        "initial": "G"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Clear your doubts before getting started",
+    "items": [
+      {
+        "question": "How long does the complete process take?",
+        "answer": "Essential Website: 7-10 business days after content approval. Managed Automation: 10-14 business days for complete setup."
+      },
+      {
+        "question": "Do I need to know technology to have a website?",
+        "answer": "No. With the Essential package, we provide 1h of training for basic content management. With Managed, we handle everything for you — you just need to send us text/images when you want to update something."
+      },
+      {
+        "question": "What happens after the 1st month of included support (Essential)?",
+        "answer": "The site is yours and stays online for free on Vercel. If you need additional support, we offer packages: €60/hour (ad-hoc) or pre-paid packages with discount."
+      },
+      {
+        "question": "Can I change my package later?",
+        "answer": "Yes! If you start with Essential and want to upgrade to Managed, we credit your initial investment (€300 is deducted from the €800 setup). Migration is free."
+      },
+      {
+        "question": "How does cancellation of the Managed package work?",
+        "answer": "You can cancel with 30 days notice. Your plan and respective automations end at the end of the last billed period."
+      },
+      {
+        "question": "What are \"operations\" in the Managed package?",
+        "answer": "Each automatic interaction (e.g., form submitted, automatic email, Google Sheets update) consumes 1 operation. 2,500/month equals ~20 interactions/day, sufficient for most local businesses. We monitor usage and notify you if you're near the limit."
+      },
+      {
+        "question": "What if I exceed 2,500 operations?",
+        "answer": "We notify you when you reach 80% of the limit. You have two options: upgrade to a higher plan or add +€30 per 1,000 extra operations. Occasional spikes are tolerated (fair use)."
+      },
+      {
+        "question": "Do you only work in Lisbon?",
+        "answer": "No. We work with clients throughout Portugal and also internationally (support in Portuguese and English). Online or in-person meetings (Lisbon area)."
+      },
+      {
+        "question": "How do automations work in practice?",
+        "answer": "Essential: Direct buttons (WhatsApp, phone) and forms that send email. Managed: Complete flows — e.g., form → Telegram notification → Google Sheets entry → automatic client email → follow-up reminder."
+      },
+      {
+        "question": "Do I own the website and domain?",
+        "answer": "Yes, in both packages. The developed source code is always yours. The domain is registered in your name. Important note: Automations are linked to our Make.com/Zapier accounts. If you cancel Managed, the basic site remains functional, but you lose the automatic features."
+      }
+    ]
+  },
+  "ctaForm": {
+    "title": "Ready for your Re-Evolution?",
+    "subtitle": "100% free diagnosis · No commitment · Response in less than 24 hours",
+    "fields": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone/WhatsApp",
+      "business_type": "Type of business",
+      "challenge": "What is your biggest current challenge?",
+      "challenge_placeholder": "E.g.: I have no online presence, I lose clients to competitors, manual processes consume too much time...",
+      "budget": "Estimated budget",
+      "urgency": "Project urgency",
+      "privacy": "I accept the Privacy Policy"
+    },
+    "business_types": [
+      "Restaurant / Café",
+      "Lawyer / Legal Consulting",
+      "Dentist / Medical Clinic",
+      "Hairdresser / Aesthetics",
+      "Gym / Personal Trainer",
+      "Other"
+    ],
+    "budget_options": [
+      "Up to €500",
+      "€500 - €1,000",
+      "More than €1,000",
+      "I don't know yet"
+    ],
+    "urgency_options": [
+      "Just exploring (no rush)",
+      "Would like to launch in 1 month",
+      "Urgent (need ASAP)"
+    ],
+    "submit": "Get Free Diagnosis Now",
+    "submitting": "Sending...",
+    "success_title": "Diagnosis received successfully!",
+    "success_message": "We've sent an email to {email}. Check your inbox (and spam) and we'll respond within 24 hours.",
+    "errors": {
+      "required": "This field is required",
+      "email_invalid": "Invalid email",
+      "phone_invalid": "Invalid phone number"
+    }
+  },
+  "contact": {
+    "title": "Location & Contact",
+    "address_label": "Address",
+    "address": "Pct. José Régio nº5, 2nd Floor Right",
+    "address_city": "2790-092, Carnaxide, Oeiras",
+    "address_country": "Portugal",
+    "phone_label": "Phone",
+    "phone": "+351 969 063 633",
+    "email_label": "Email",
+    "email_main": "geral@re-evolution.pt",
+    "email_support": "suporte@re-evolution.pt",
+    "hours_label": "Hours",
+    "hours_weekdays": "Monday to Friday: 9am - 7pm",
+    "hours_saturday": "Saturdays: 10am - 2pm (by appointment)",
+    "hours_sunday": "Sundays: Closed",
+    "btn_call": "Call Now",
+    "btn_whatsapp": "WhatsApp",
+    "btn_email": "Send Email"
+  },
+  "footer": {
+    "tagline": "Accessible and human digital transformation",
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "privacy_policy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "newsletter_title": "Get Case Studies",
+    "newsletter_placeholder": "Your email",
+    "newsletter_submit": "Subscribe",
+    "newsletter_description": "We send monthly real examples of digital transformations",
+    "copyright": "© 2025 Re-Evolution, Digital Services. All rights reserved.",
+    "made_with": "Built with ❤️ by Re-Evolution itself"
+  },
+  "cookies": {
+    "title": "This website uses cookies",
+    "description": "We use essential cookies for the site to function and analytical cookies (Google Analytics) to improve your experience. Your data is processed in accordance with our",
+    "privacy_link": "Privacy Policy",
+    "accept": "Accept Cookies",
+    "reject": "Reject"
+  },
+  "chatbot": {
+    "title": "Re-Evolution Assistant",
+    "status": "Online · Responds in seconds",
+    "greeting": "Hello! I'm the Re-Evolution assistant. How can I help you today?\n\nYou can ask about:\n• Services and pricing\n• How automations work\n• Project examples\n• Schedule a free diagnosis",
+    "input_placeholder": "Type your message...",
+    "send": "Send",
+    "responses": {
+      "price": "Our packages start at €300 (Essential), €600 (Automation) and €1,200 (Complete). All include 6 months of support. Would you like to schedule a free diagnosis to receive a personalized proposal?",
+      "automation": "Automations work like this: when something happens on your site (like filling a form), automatic actions are triggered - sending emails, saving data to Google Sheets and notifying via Telegram/WhatsApp. All without lifting a finger! Want to know more?",
+      "time": "The complete process takes between 1 to 3 weeks, from first contact to launch. We always start with a free diagnosis. Want to schedule yours?",
+      "portfolio": "We've developed projects for restaurants, lawyers and other local businesses, with results like +40% reservations and 70% more qualified leads. You can see the details in the Portfolio section above!",
+      "default": "Great question! To better answer, I'd like to speak with you directly. You can fill out the quick diagnosis or chat on WhatsApp!",
+      "cta_diagnosis": "Diagnosis",
+      "cta_whatsapp": "WhatsApp"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "last_updated": "Last updated: February 2025",
+    "sections": {
+      "data_collected": {
+        "title": "1. Data We Collect",
+        "content": "Name, email, phone (when submitting forms). Browsing data via Google Analytics (anonymized IP, pages visited, session duration). Technical and analytical cookies."
+      },
+      "data_usage": {
+        "title": "2. How We Use Data",
+        "content": "Responding to your contact requests. Improving website experience. Traffic and behavior analysis (anonymous)."
+      },
+      "data_sharing": {
+        "title": "3. Data Sharing",
+        "content": "We do not sell your data. We only share with: Google Analytics (anonymized data), Make.com (automations, encrypted data), Vercel servers (hosting)."
+      },
+      "rights": {
+        "title": "4. Your Rights (GDPR)",
+        "content": "You have the right to: Access your data. Correct incorrect data. Delete your data. Withdraw consent. Contact: geral@re-evolution.pt"
+      },
+      "cookies_section": {
+        "title": "5. Cookies",
+        "content": "We use: Essential cookies (site functionality). Analytical cookies (Google Analytics - optional). You can manage preferences in the cookie banner."
+      },
+      "security": {
+        "title": "6. Security",
+        "content": "Data encrypted (HTTPS), stored on secure servers (Vercel, Google Cloud)."
+      },
+      "contact_section": {
+        "title": "7. Contact",
+        "content": "Re-Evolution, Digital Services. geral@re-evolution.pt. +351 969 063 633"
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "last_updated": "Last updated: February 2025",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of Terms",
+        "content": "By using this website, you agree to these terms."
+      },
+      "services": {
+        "title": "2. Services Offered",
+        "content": "Website development. Digital automations. Digital consulting."
+      },
+      "payments": {
+        "title": "3. Quotes and Payments",
+        "content": "Quotes valid for 30 days. Payment: 50% start, 50% completion. Values in EUR, VAT included."
+      },
+      "deadlines": {
+        "title": "4. Delivery Deadlines",
+        "content": "1-3 weeks depending on complexity. Delays communicated in advance."
+      },
+      "warranty": {
+        "title": "5. Warranty",
+        "content": "6 months technical support included. Optional maintenance after this period."
+      },
+      "ip": {
+        "title": "6. Intellectual Property",
+        "content": "Client owns the website and domain. Developed code is the client's property."
+      },
+      "liability": {
+        "title": "7. Limitation of Liability",
+        "content": "We are not responsible for: Downtime of third-party services (hosting, DNS). Content provided by the client. Marketing results not guaranteed."
+      },
+      "contact_section": {
+        "title": "8. Contact",
+        "content": "geral@re-evolution.pt"
+      }
+    }
+  }
+}

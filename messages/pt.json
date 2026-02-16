@@ -1,0 +1,471 @@
+{
+  "header": {
+    "services": "Serviços",
+    "portfolio": "Portfolio",
+    "process": "Processo",
+    "pricing": "Preços",
+    "contact": "Contacto",
+    "cta": "Diagnóstico Gratuito",
+    "menu": "Menu"
+  },
+  "hero": {
+    "eyebrow": "Transformação Digital para Negócios Locais",
+    "title": "Digitalize o seu negócio com automação inteligente",
+    "subtitle": "Transformamos negócios locais em máquinas de aquisição de clientes - sem precisar de saber tecnologia",
+    "cta_primary": "Começar Diagnóstico Gratuito",
+    "cta_secondary": "Ver Como Funciona",
+    "badge_satisfaction": "100% Satisfação",
+    "badge_response": "Resposta <24h",
+    "badge_location": "Lisboa & Nacional"
+  },
+  "problem": {
+    "title": "Identificou-se com alguma destas situações?",
+    "cards": {
+      "no_site": "Não tenho site",
+      "facebook": "Facebook não traz clientes",
+      "tech_fear": "Tecnologia assusta-me",
+      "no_google": "Não apareço no Google",
+      "losing_clients": "Perco clientes para concorrência",
+      "manual_processes": "Processos manuais consomem tempo"
+    }
+  },
+  "solution": {
+    "title": "Como a Re-Evolution resolve isto",
+    "subtitle": "Soluções completas de presença digital com automação incluída",
+    "learn_more": "Saber mais",
+    "services": {
+      "landing_pages": {
+        "title": "Landing Pages Profissionais",
+        "description": "Design moderno e responsivo, otimizado para SEO e conversão, carregamento ultrarrápido"
+      },
+      "automations": {
+        "title": "Automações Inteligentes",
+        "description": "Processos que funcionam sozinhos usando Make e Zapier, economize tempo e ganhe eficiência"
+      },
+      "ai_assistants": {
+        "title": "AI Assistants",
+        "description": "Chatbots e assistentes virtuais que respondem 24 horas por dia, 7 dias por semana, qualificam leads automaticamente"
+      },
+      "google_business": {
+        "title": "Google Business Setup",
+        "description": "Configure presença no Google Maps, apareça nas pesquisas locais da sua área"
+      },
+      "email": {
+        "title": "Email Profissional",
+        "description": "Email com o seu domínio (nome@seunegocio.pt) para maior credibilidade"
+      },
+      "support": {
+        "title": "Suporte Contínuo",
+        "description": "Manutenção, atualizações e evolução constante do seu projeto digital"
+      }
+    }
+  },
+  "process": {
+    "title": "Do contacto ao lançamento em 1-3 semanas",
+    "subtitle": "Processo simples e transparente",
+    "steps": {
+      "diagnosis": {
+        "title": "Diagnóstico Gratuito",
+        "time": "0-24h",
+        "description": "Analisamos o seu negócio, identificamos oportunidades e necessidades específicas"
+      },
+      "proposal": {
+        "title": "Proposta Personalizada",
+        "time": "48h",
+        "description": "Apresentamos página de exemplo, automações sugeridas e investimento exato"
+      },
+      "development": {
+        "title": "Desenvolvimento",
+        "time": "1-2 semanas",
+        "description": "Construímos o site, configuramos automações e testamos tudo antes do lançamento"
+      },
+      "launch": {
+        "title": "Lançamento",
+        "time": "Dia D",
+        "description": "Entregamos o projeto completo e ensinamos a usar todas as funcionalidades"
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Transformações Reais",
+    "subtitle": "Veja alguns projetos que já desenvolvemos",
+    "filters": {
+      "all": "Todos",
+      "restaurants": "Restaurantes",
+      "professional": "Serviços Profissionais"
+    },
+    "problem_label": "Problema",
+    "solution_label": "Solução",
+    "result_label": "Resultado",
+    "view_details": "Ver Detalhes",
+    "close": "Fechar",
+    "projects": {
+      "restaurant_a": {
+        "title": "Restaurante A",
+        "badge": "Restaurante Tradicional",
+        "problem": "Sem presença online, perdiam clientes turísticos e reservas",
+        "solution": "Landing page + menu automático via Google Sheets + sistema reservas WhatsApp (via Telegram)",
+        "result": "+40% reservas em 2 meses",
+        "placeholder": "Screenshot Restaurante A - Substituir com imagem real"
+      },
+      "restaurant_b": {
+        "title": "Restaurante B",
+        "badge": "Churrascaria",
+        "problem": "Menu desatualizado, clientes não sabiam especialidades",
+        "solution": "Site moderno + atualização menu automática + notificações Telegram → WhatsApp para novos pedidos",
+        "result": "Redução 60% tempo gestão menu",
+        "placeholder": "Screenshot Restaurante B - Substituir com imagem real"
+      },
+      "lawyer": {
+        "title": "Advogado X",
+        "badge": "Escritório Advocacia",
+        "problem": "Leads não qualificados, tempo perdido em consultas sem potencial",
+        "solution": "Website profissional + formulário triagem automática + agendamento integrado",
+        "result": "70% leads mais qualificados, -50% tempo em triagem",
+        "placeholder": "Screenshot Advogado X - Substituir com imagem real"
+      }
+    }
+  },
+  "automations": {
+    "title": "Veja as automações a funcionar",
+    "subtitle": "Tecnologia que trabalha por si 24/7",
+    "highlight": "Quando um cliente preenche formulário no seu site, tudo isto acontece automaticamente sem você mexer um dedo",
+    "flow": {
+      "form": "Formulário Website",
+      "make": "Make.com processa",
+      "email": "Email automático enviado",
+      "sheets": "Dados guardados Google Sheets",
+      "telegram": "Notificação Telegram → WhatsApp"
+    }
+  },
+  "pricing": {
+    "title": "Investimento Transparente",
+    "subtitle": "Sem custos escondidos. Sem surpresas.",
+    "most_popular": "Mais Popular",
+    "one_time": "Investimento único",
+    "per_day": "~1,43€/dia",
+    "per_month": "/mês",
+    "setup_label": "Setup",
+    "contract": "Contrato 12 meses",
+    "view_all": "Ver Tudo Incluído",
+    "hide_details": "Ocultar Detalhes",
+    "compare": "Comparar Pacotes",
+    "hide_compare": "Ocultar Comparação",
+    "guarantee_30": "30 dias garantia",
+    "guarantee_60": "60 dias período teste",
+    "cta": "Começar Agora",
+    "cta_final": "Ainda com dúvidas? Agendar conversa gratuita (30min)",
+    "addons_note": "Add-ons disponíveis: Chatbot AI, WhatsApp Business API, Relatórios Avançados",
+    "footnote_domain": "* Domínio 12-15€/ano a seu cargo. Hosting gratuito (Vercel).",
+    "plans": {
+      "essential": {
+        "name": "Website Essencial",
+        "price": "300",
+        "tagline": "Presença Digital Completa",
+        "description": "Para quem quer presença online profissional sem custos mensais",
+        "features": [
+          "Landing page profissional",
+          "SEO + Google Business",
+          "Email @seudominio.pt",
+          "Automações essenciais (botões WhatsApp, formulários básicos)",
+          "1 mês suporte incluído"
+        ]
+      },
+      "managed": {
+        "name": "Automação Managed",
+        "price_setup": "800",
+        "price_monthly": "140",
+        "tagline": "Crescimento Sem Preocupações",
+        "description": "Para negócios que querem automatizar e crescer sem preocupações",
+        "includes": "Tudo do Essencial +",
+        "features": [
+          "3 automações complexas",
+          "Domínio + hosting incluído",
+          "Suporte prioritário",
+          "Relatórios mensais",
+          "2.500 operações/mês incluídas"
+        ]
+      }
+    },
+    "comparison": {
+      "rows": [
+        { "feature": "Investimento inicial", "essential": "300€", "managed": "800€" },
+        { "feature": "Custo mensal", "essential": "0€*", "managed": "140€" },
+        { "feature": "Landing profissional", "essential": "✓", "managed": "✓" },
+        { "feature": "SEO básico", "essential": "✓", "managed": "✓" },
+        { "feature": "Email profissional", "essential": "✓", "managed": "✓" },
+        { "feature": "Automações simples", "essential": "✓", "managed": "✓" },
+        { "feature": "Automações complexas", "essential": "✗", "managed": "3 incluídas" },
+        { "feature": "Domínio incluído", "essential": "✗", "managed": "✓" },
+        { "feature": "Suporte contínuo", "essential": "Ad-hoc pago", "managed": "✓ Prioritário" },
+        { "feature": "Relatórios mensais", "essential": "✗", "managed": "✓" },
+        { "feature": "Ideal para", "essential": "Presença básica", "managed": "Crescimento ativo" }
+      ],
+      "footnote": "* Domínio 12-15€/ano (responsabilidade cliente)"
+    }
+  },
+  "credentials": {
+    "title": "Experiência em que pode confiar",
+    "subtitle": "Conhecimento técnico + experiência empresarial",
+    "formation_title": "Anos de experiência acumulada:",
+    "tech_title": "Tecnologias Utilizadas",
+    "formations": [
+      "Engenharia",
+      "Digital Marketing & E-Commerce",
+      "UX/UI Design",
+      "Cybersegurança",
+      "Prompt Engineering",
+      "Web Design (HTML/CSS/JS/React/Python/PHP)"
+    ],
+    "technologies": {
+      "nextjs": "Next.js 15 - Framework moderno React",
+      "tailwind": "Tailwind CSS - Design system",
+      "vercel": "Vercel - Hosting ultrarrápido",
+      "cloudflare": "Cloudflare - DNS e segurança",
+      "make": "Make - Automações visuais",
+      "zapier": "Zapier - Integrações",
+      "claude": "Claude Code - Desenvolvimento AI-assisted",
+      "vscode": "VS Code - Ambiente desenvolvimento"
+    }
+  },
+  "testimonials": {
+    "title": "O que dizem os nossos clientes",
+    "subtitle": "Histórias reais de transformação digital",
+    "items": [
+      {
+        "quote": "O site teve uma fusão perfeita com o meu negócio. A automação funciona 24/7 e é uma mais-valia enorme para captar novos clientes.",
+        "name": "Verónica",
+        "role": "Proprietária de Salão de Beleza",
+        "initial": "V"
+      },
+      {
+        "quote": "Profissionalismo incrível do início ao fim. O site está espetacular e as automações trouxeram-me muito mais contactos qualificados.",
+        "name": "Paulo",
+        "role": "Dono de Oficina Mecânica",
+        "initial": "P"
+      },
+      {
+        "quote": "Estou muito orgulhosa do resultado. O meu negócio tem agora uma presença online com uma qualidade que nunca imaginei.",
+        "name": "Gisela",
+        "role": "Proprietária de Clínica Estética",
+        "initial": "G"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "subtitle": "Tire as suas dúvidas antes de começar",
+    "items": [
+      {
+        "question": "Quanto tempo demora o processo completo?",
+        "answer": "Website Essencial: 7-10 dias úteis após aprovação de conteúdos. Automação Managed: 10-14 dias úteis para setup completo."
+      },
+      {
+        "question": "Preciso saber de tecnologia para ter um site?",
+        "answer": "Não. No pacote Essencial, damos 1h de formação para gestão básica de conteúdos. No Managed, tratamos de tudo por si — apenas precisa de nos enviar textos/imagens quando quer atualizar algo."
+      },
+      {
+        "question": "O que acontece após o 1.º mês de suporte incluído (Essencial)?",
+        "answer": "O site é seu e continua online gratuitamente no Vercel. Se precisar de suporte adicional, disponibilizamos pacotes: 60€/hora (ad-hoc) ou pacotes pré-pagos com desconto."
+      },
+      {
+        "question": "Posso mudar de pacote depois?",
+        "answer": "Sim! Se começar com Essencial e quiser fazer upgrade para Managed, creditamos o investimento inicial (300€ são abatidos aos 800€ de setup). A migração é gratuita."
+      },
+      {
+        "question": "Como funciona o cancelamento do pacote Managed?",
+        "answer": "Pode cancelar com 30 dias de aviso prévio. O seu plano e respetivas automações terminam no final do último período faturado."
+      },
+      {
+        "question": "O que são \"operações\" no pacote Managed?",
+        "answer": "Cada interação automática (ex: formulário enviado, email automático, atualização no Google Sheets) consome 1 operação. 2.500/mês equivale a ~20 interações/dia, suficiente para a maioria dos negócios locais. Monitorizamos o uso e avisamos se estiver perto do limite."
+      },
+      {
+        "question": "E se eu ultrapassar as 2.500 operações?",
+        "answer": "Avisamos quando atingir 80% do limite. Tem duas opções: upgrade para plano superior ou adicionar +30€ por cada 1.000 operações extra. Picos ocasionais são tolerados (fair use)."
+      },
+      {
+        "question": "Trabalham apenas em Lisboa?",
+        "answer": "Não. Trabalhamos com clientes em todo Portugal e também internacionalmente (suporte em Português e Inglês). Reuniões online ou presenciais (zona de Lisboa)."
+      },
+      {
+        "question": "Como funcionam as automações na prática?",
+        "answer": "Essencial: Botões diretos (WhatsApp, telefone) e formulários que enviam email. Managed: Fluxos completos — ex: formulário → notificação Telegram → registo Google Sheets → email automático cliente → lembrete follow-up."
+      },
+      {
+        "question": "Fico dono do site e do domínio?",
+        "answer": "Sim, em ambos os pacotes. O código-fonte desenvolvido fica sempre seu. O domínio é registado em seu nome. Nota importante: As automações estão ligadas às nossas contas Make.com/Zapier. Se cancelar o Managed, o site básico mantém-se funcional, mas perde as funcionalidades automáticas."
+      }
+    ]
+  },
+  "ctaForm": {
+    "title": "Pronto para a sua Re-Evolution?",
+    "subtitle": "Diagnóstico 100% gratuito · Sem compromisso · Resposta em menos de 24 horas",
+    "fields": {
+      "name": "Nome completo",
+      "email": "Email",
+      "phone": "Telefone/WhatsApp",
+      "business_type": "Tipo de negócio",
+      "challenge": "Qual o seu maior desafio atual?",
+      "challenge_placeholder": "Ex: Não tenho presença online, perco clientes para concorrência, processos manuais consomem muito tempo...",
+      "budget": "Orçamento estimado",
+      "urgency": "Urgência do projeto",
+      "privacy": "Aceito a Política de Privacidade"
+    },
+    "business_types": [
+      "Restaurante / Café",
+      "Advogado / Consultoria Jurídica",
+      "Dentista / Clínica Médica",
+      "Cabeleireiro / Estética",
+      "Ginásio / Personal Trainer",
+      "Outro"
+    ],
+    "budget_options": [
+      "Até €500",
+      "€500 - €1.000",
+      "Mais de €1.000",
+      "Ainda não sei"
+    ],
+    "urgency_options": [
+      "Apenas a explorar (sem pressa)",
+      "Gostaria de lançar em 1 mês",
+      "Urgente (preciso o quanto antes)"
+    ],
+    "submit": "Receber Diagnóstico Gratuito Agora",
+    "submitting": "A enviar...",
+    "success_title": "Diagnóstico recebido com sucesso!",
+    "success_message": "Enviámos um email para {email}. Verifique a sua caixa de entrada (e spam) e responderemos em menos de 24 horas.",
+    "errors": {
+      "required": "Este campo é obrigatório",
+      "email_invalid": "Email inválido",
+      "phone_invalid": "Número de telefone inválido"
+    }
+  },
+  "contact": {
+    "title": "Localização & Contacto",
+    "address_label": "Morada",
+    "address": "Pct. José Régio nº5, 2º Dto",
+    "address_city": "2790-092, Carnaxide, Oeiras",
+    "address_country": "Portugal",
+    "phone_label": "Telefone",
+    "phone": "+351 969 063 633",
+    "email_label": "Email",
+    "email_main": "geral@re-evolution.pt",
+    "email_support": "suporte@re-evolution.pt",
+    "hours_label": "Horário",
+    "hours_weekdays": "Segunda a Sexta: 9h - 19h",
+    "hours_saturday": "Sábados: 10h - 14h (por marcação)",
+    "hours_sunday": "Domingos: Encerrado",
+    "btn_call": "Ligar Agora",
+    "btn_whatsapp": "WhatsApp",
+    "btn_email": "Enviar Email"
+  },
+  "footer": {
+    "tagline": "Transformação digital acessível e humana",
+    "navigation": "Navegação",
+    "legal": "Legal",
+    "privacy_policy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "newsletter_title": "Receba Casos de Estudo",
+    "newsletter_placeholder": "O seu email",
+    "newsletter_submit": "Subscrever",
+    "newsletter_description": "Enviamos mensalmente exemplos reais de transformações digitais",
+    "copyright": "© 2025 Re-Evolution, Digital Services. Todos os direitos reservados.",
+    "made_with": "Criado com ❤️ pela própria Re-Evolution"
+  },
+  "cookies": {
+    "title": "Este site utiliza cookies",
+    "description": "Utilizamos cookies essenciais para o funcionamento do site e cookies analíticos (Google Analytics) para melhorar a sua experiência. Os seus dados são tratados de acordo com a nossa",
+    "privacy_link": "Política de Privacidade",
+    "accept": "Aceitar Cookies",
+    "reject": "Rejeitar"
+  },
+  "chatbot": {
+    "title": "Re-Evolution Assistant",
+    "status": "Online · Responde em segundos",
+    "greeting": "Olá! Sou o assistente da Re-Evolution. Como posso ajudar hoje?\n\nPode perguntar sobre:\n• Serviços e preços\n• Como funcionam as automações\n• Exemplos de projetos\n• Agendar diagnóstico gratuito",
+    "input_placeholder": "Escreva a sua mensagem...",
+    "send": "Enviar",
+    "responses": {
+      "price": "Os nossos pacotes começam em €300 (Essencial), €600 (Automação) e €1.200 (Completo). Todos incluem 6 meses de suporte. Quer agendar um diagnóstico gratuito para receber uma proposta personalizada?",
+      "automation": "As automações funcionam assim: quando algo acontece no seu site (como preencher um formulário), ações automáticas são executadas - enviar emails, guardar dados em Google Sheets e notificar via Telegram/WhatsApp. Tudo sem mexer um dedo! Quer saber mais?",
+      "time": "O processo completo demora entre 1 a 3 semanas, desde o primeiro contacto até ao lançamento. Começamos sempre com um diagnóstico gratuito. Quer agendar o seu?",
+      "portfolio": "Já desenvolvemos projetos para restaurantes, advogados e outros negócios locais, com resultados como +40% reservas e 70% mais leads qualificados. Pode ver os detalhes na secção Portfolio acima!",
+      "default": "Ótima pergunta! Para responder melhor, gostaria de falar diretamente consigo. Pode preencher o diagnóstico rápido ou falar no WhatsApp!",
+      "cta_diagnosis": "Diagnóstico",
+      "cta_whatsapp": "WhatsApp"
+    }
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "last_updated": "Última atualização: Fevereiro 2025",
+    "sections": {
+      "data_collected": {
+        "title": "1. Dados que Recolhemos",
+        "content": "Nome, email, telefone (quando submete formulários). Dados de navegação via Google Analytics (IP anonimizado, páginas visitadas, tempo de sessão). Cookies técnicos e analíticos."
+      },
+      "data_usage": {
+        "title": "2. Como Usamos os Dados",
+        "content": "Responder aos seus pedidos de contacto. Melhorar a experiência do website. Análise de tráfego e comportamento (anónimo)."
+      },
+      "data_sharing": {
+        "title": "3. Partilha de Dados",
+        "content": "Não vendemos os seus dados. Partilhamos apenas com: Google Analytics (dados anonimizados), Make.com (automações, dados encriptados), Servidores Vercel (hosting)."
+      },
+      "rights": {
+        "title": "4. Os Seus Direitos (RGPD)",
+        "content": "Tem direito a: Aceder aos seus dados. Corrigir dados incorretos. Eliminar os seus dados. Retirar consentimento. Contacte: geral@re-evolution.pt"
+      },
+      "cookies_section": {
+        "title": "5. Cookies",
+        "content": "Utilizamos: Cookies essenciais (funcionamento do site). Cookies analíticos (Google Analytics - opcional). Pode gerir preferências no banner de cookies."
+      },
+      "security": {
+        "title": "6. Segurança",
+        "content": "Dados encriptados (HTTPS), armazenados em servidores seguros (Vercel, Google Cloud)."
+      },
+      "contact_section": {
+        "title": "7. Contacto",
+        "content": "Re-Evolution, Digital Services. geral@re-evolution.pt. +351 969 063 633"
+      }
+    }
+  },
+  "terms": {
+    "title": "Termos de Serviço",
+    "last_updated": "Última atualização: Fevereiro 2025",
+    "sections": {
+      "acceptance": {
+        "title": "1. Aceitação dos Termos",
+        "content": "Ao usar este website, concorda com estes termos."
+      },
+      "services": {
+        "title": "2. Serviços Oferecidos",
+        "content": "Desenvolvimento de websites. Automações digitais. Consultoria digital."
+      },
+      "payments": {
+        "title": "3. Orçamentos e Pagamentos",
+        "content": "Orçamentos válidos por 30 dias. Pagamento: 50% início, 50% conclusão. Valores em EUR, IVA incluído."
+      },
+      "deadlines": {
+        "title": "4. Prazos de Entrega",
+        "content": "1-3 semanas conforme complexidade. Atrasos comunicados previamente."
+      },
+      "warranty": {
+        "title": "5. Garantia",
+        "content": "6 meses suporte técnico incluído. Manutenção opcional após este período."
+      },
+      "ip": {
+        "title": "6. Propriedade Intelectual",
+        "content": "Cliente é dono do website e domínio. Código desenvolvido é propriedade do cliente."
+      },
+      "liability": {
+        "title": "7. Limitação de Responsabilidade",
+        "content": "Não nos responsabilizamos por: Downtime de serviços terceiros (hosting, DNS). Conteúdo fornecido pelo cliente. Resultados de marketing não garantidos."
+      },
+      "contact_section": {
+        "title": "8. Contacto",
+        "content": "geral@re-evolution.pt"
+      }
+    }
+  }
+}

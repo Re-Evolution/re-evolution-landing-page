@@ -1,6 +1,4 @@
-import './globals.css';
-
-export default function RootLayout({
+export default function LegalLayout({
   children,
 }: {
   children: React.ReactNode;
