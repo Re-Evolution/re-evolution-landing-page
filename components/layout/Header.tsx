@@ -142,7 +142,14 @@ export default function Header() {
                 <a
                   key={item.key}
                   href={item.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileOpen(false);
+                    const id = item.href.replace('#', '');
+                    setTimeout(() => {
+                      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+                    }, 300);
+                  }}
                   className="block px-4 py-3 text-base font-medium text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
                 >
                   {t(item.key)}
@@ -150,9 +157,13 @@ export default function Header() {
               ))}
               <a
                 href="#diagnostico"
-                onClick={() => {
+                onClick={(e) => {
+                  e.preventDefault();
                   setMobileOpen(false);
                   trackCTA('Header_Mobile');
+                  setTimeout(() => {
+                    document.getElementById('diagnostico')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 300);
                 }}
                 className="block w-full text-center px-4 py-3 mt-2 bg-re-yellow text-re-dark-blue font-semibold rounded-lg hover:bg-re-yellow/90 transition-colors"
               >

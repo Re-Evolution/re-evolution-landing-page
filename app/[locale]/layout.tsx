@@ -32,6 +32,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: 'website',
       locale: locale === 'en' ? 'en_US' : 'pt_PT'
     },
+    icons: {
+      icon: '/images/logo.png',
+      apple: '/images/logo.png'
+    },
     alternates: {
       languages: {
         pt: '/pt',
