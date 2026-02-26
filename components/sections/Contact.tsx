@@ -83,9 +83,6 @@ export default function Contact() {
               <a href="mailto:geral@re-evolution.pt" className="text-sm text-re-blue hover:underline block">
                 {t('email_main')}
               </a>
-              <a href="mailto:suporte@re-evolution.pt" className="text-sm text-re-blue hover:underline block">
-                {t('email_support')}
-              </a>
             </div>
           </div>
 

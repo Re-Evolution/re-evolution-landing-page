@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bot, X, Send, MessageCircle } from 'lucide-react';
+import { Bot, X, Send } from 'lucide-react';
 import { trackChatbot } from '@/lib/analytics';
 import { brandify } from '@/lib/brand';
 
@@ -14,86 +14,95 @@ interface Message {
   buttons?: { label: string; action: string }[];
 }
 
+function generateSessionId() {
+  return `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+}
+
 export default function Chatbot() {
   const t = useTranslations('chatbot');
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [initialized, setInitialized] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
+  const sessionIdRef = useRef<string>(generateSessionId());
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+  }, [messages, isTyping]);
 
   const openChat = () => {
     setIsOpen(true);
     trackChatbot('open');
     if (!initialized) {
-      setMessages([
-        {
-          id: 1,
-          text: t('greeting'),
-          sender: 'bot'
-        }
-      ]);
+      setMessages([{ id: 1, text: t('greeting'), sender: 'bot' }]);
       setInitialized(true);
     }
   };
 
-  const getBotResponse = (userMessage: string): string => {
-    const lower = userMessage.toLowerCase();
-    const responses = t.raw('responses') as Record<string, string>;
-
-    if (lower.includes('preço') || lower.includes('price') || lower.includes('custo') || lower.includes('quanto')) {
-      return responses.price;
-    }
-    if (lower.includes('automação') || lower.includes('automation') || lower.includes('automat')) {
-      return responses.automation;
-    }
-    if (lower.includes('tempo') || lower.includes('time') || lower.includes('demora') || lower.includes('prazo')) {
-      return responses.time;
-    }
-    if (lower.includes('portfolio') || lower.includes('projeto') || lower.includes('project') || lower.includes('exemplo')) {
-      return responses.portfolio;
-    }
-
-    return responses.default;
+  const addBotMessage = (text: string, buttons?: { label: string; action: string }[]) => {
+    setMessages((prev) => [
+      ...prev,
+      { id: Date.now(), text, sender: 'bot', buttons },
+    ]);
   };
 
-  const sendMessage = () => {
-    if (!input.trim()) return;
+  const pollForResponse = async (sessionId: string): Promise<void> => {
+    const maxAttempts = 30; // 30 × 1 s = 30 s timeout
+    for (let i = 0; i < maxAttempts; i++) {
+      await new Promise((r) => setTimeout(r, 1000));
+      try {
+        const res = await fetch(`/api/chat/response?sessionId=${sessionId}`);
+        const data = await res.json();
+        if (data.message) {
+          addBotMessage(data.message, data.buttons ?? undefined);
+          return;
+        }
+      } catch {
+        // network hiccup — keep polling
+      }
+    }
+    addBotMessage(t('responses.default'));
+  };
+
+  const sendMessage = async () => {
+    if (!input.trim() || isTyping) return;
 
     trackChatbot('message');
 
-    const userMsg: Message = {
-      id: Date.now(),
-      text: input,
-      sender: 'user'
-    };
+    const messageText = input;
+    const userMsg: Message = { id: Date.now(), text: messageText, sender: 'user' };
 
     setMessages((prev) => [...prev, userMsg]);
     setInput('');
+    setIsTyping(true);
 
-    // Simulate typing delay
-    setTimeout(() => {
-      const botResponse = getBotResponse(input);
-      const isDefault = botResponse === (t.raw('responses') as Record<string, string>).default;
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: messageText, sessionId: sessionIdRef.current }),
+      });
 
-      const botMsg: Message = {
-        id: Date.now() + 1,
-        text: botResponse,
-        sender: 'bot',
-        buttons: isDefault
-          ? [
-              { label: t('responses.cta_diagnosis'), action: 'diagnosis' },
-              { label: t('responses.cta_whatsapp'), action: 'whatsapp' }
-            ]
-          : undefined
-      };
+      if (!res.ok) throw new Error('API error');
 
-      setMessages((prev) => [...prev, botMsg]);
-    }, 800);
+      const data = await res.json();
+
+      if (data.message) {
+        // Synchronous reply from Make.com
+        addBotMessage(data.message, data.buttons ?? undefined);
+      } else if (data.pending) {
+        // Async mode: poll until Make.com posts the reply
+        await pollForResponse(data.sessionId);
+      } else {
+        throw new Error('Unexpected response');
+      }
+    } catch {
+      addBotMessage(t('responses.default'));
+    } finally {
+      setIsTyping(false);
+    }
   };
 
   const handleButtonClick = (action: string) => {
@@ -188,6 +197,18 @@ export default function Chatbot() {
                   </div>
                 </div>
               ))}
+
+              {/* Typing indicator */}
+              {isTyping && (
+                <div className="flex justify-start">
+                  <div className="bg-bg-secondary rounded-2xl rounded-bl-sm px-4 py-3 flex gap-1 items-center">
+                    <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                    <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                    <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                  </div>
+                </div>
+              )}
+
               <div ref={messagesEndRef} />
             </div>
 
@@ -206,10 +227,11 @@ export default function Chatbot() {
                   onChange={(e) => setInput(e.target.value)}
                   placeholder={t('input_placeholder')}
                   className="flex-1 px-3 py-2 border border-border rounded-lg text-sm focus:outline-none focus:border-re-blue transition-colors"
+                  disabled={isTyping}
                 />
                 <button
                   type="submit"
-                  disabled={!input.trim()}
+                  disabled={!input.trim() || isTyping}
                   className="p-2 bg-re-blue text-white rounded-lg hover:bg-[#0056CC] transition-colors disabled:opacity-40 cursor-pointer disabled:cursor-not-allowed"
                   aria-label={t('send')}
                 >
