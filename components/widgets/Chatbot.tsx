@@ -49,7 +49,7 @@ export default function Chatbot() {
   };
 
   const pollForResponse = async (sessionId: string): Promise<void> => {
-    const maxAttempts = 30; // 30 × 1 s = 30 s timeout
+    const maxAttempts = 45; // 45 × 1 s = 45 s timeout (Make.com has a 40 s webhook limit)
     for (let i = 0; i < maxAttempts; i++) {
       await new Promise((r) => setTimeout(r, 1000));
       try {
