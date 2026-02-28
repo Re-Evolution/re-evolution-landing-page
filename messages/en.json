@@ -116,13 +116,13 @@
         "result": "60% reduction in menu management time",
         "placeholder": "Screenshot Restaurant B - Replace with real image"
       },
-      "lawyer": {
-        "title": "Lawyer X",
-        "badge": "Law Office",
-        "problem": "Unqualified leads, time wasted on consultations without potential",
-        "solution": "Professional website + automatic screening form + integrated scheduling",
-        "result": "70% more qualified leads, -50% screening time",
-        "placeholder": "Screenshot Lawyer X - Replace with real image"
+      "realtor": {
+        "title": "Real Estate Consultant",
+        "badge": "Real Estate Consulting",
+        "problem": "Relied entirely on referrals, no digital presence to attract buyers and sellers",
+        "solution": "Professional website + integrated property catalog + free online property valuation form",
+        "result": "+120% qualified contacts in 3 months",
+        "placeholder": "Screenshot Real Estate Consultant - Replace with real image"
       }
     }
   },

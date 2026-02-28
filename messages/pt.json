@@ -116,13 +116,13 @@
         "result": "Redução 60% tempo gestão menu",
         "placeholder": "Screenshot Restaurante B - Substituir com imagem real"
       },
-      "lawyer": {
-        "title": "Advogado X",
-        "badge": "Escritório Advocacia",
-        "problem": "Leads não qualificados, tempo perdido em consultas sem potencial",
-        "solution": "Website profissional + formulário triagem automática + agendamento integrado",
-        "result": "70% leads mais qualificados, -50% tempo em triagem",
-        "placeholder": "Screenshot Advogado X - Substituir com imagem real"
+      "realtor": {
+        "title": "Consultor Imobiliário",
+        "badge": "Consultoria Imobiliária",
+        "problem": "Dependia exclusivamente de referências, sem presença digital para captar compradores e vendedores",
+        "solution": "Website profissional + catálogo de imóveis integrado + formulário de avaliação gratuita online",
+        "result": "+120% contactos qualificados em 3 meses",
+        "placeholder": "Screenshot Consultor Imobiliário - Substituir com imagem real"
       }
     }
   },

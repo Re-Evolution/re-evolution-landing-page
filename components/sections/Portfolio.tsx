@@ -13,7 +13,7 @@ import SectionWrapper from '@/components/ui/SectionWrapper';
  *
  *   portfolio-restaurant-a.jpg   (or .png, .webp)
  *   portfolio-restaurant-b.jpg
- *   portfolio-lawyer.jpg
+ *   portfolio-realtor.jpg
  *
  * For a scroll-down animation effect, use one of these instead:
  *
@@ -27,12 +27,12 @@ import SectionWrapper from '@/components/ui/SectionWrapper';
  * See SETUP.md section "Portfolio Scroll Animations" for instructions.
  */
 
-type ProjectKey = 'restaurant_a' | 'restaurant_b' | 'lawyer';
+type ProjectKey = 'restaurant_a' | 'restaurant_b' | 'realtor';
 
 const projects: { key: ProjectKey; color: string; slug: string }[] = [
   { key: 'restaurant_a', color: 'bg-re-blue/20', slug: 'restaurant-a' },
   { key: 'restaurant_b', color: 'bg-re-yellow/20', slug: 'restaurant-b' },
-  { key: 'lawyer', color: 'bg-success/20', slug: 'lawyer' }
+  { key: 'realtor', color: 'bg-success/20', slug: 'realtor' }
 ];
 
 const IMAGE_EXTENSIONS = ['mp4', 'gif', 'webp', 'jpg', 'png'];
