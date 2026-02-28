@@ -14,9 +14,6 @@ interface Message {
   buttons?: { label: string; action: string }[];
 }
 
-function generateSessionId() {
-  return `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
-}
 
 export default function Chatbot() {
   const t = useTranslations('chatbot');
@@ -25,12 +22,19 @@ export default function Chatbot() {
   const [input, setInput] = useState('');
   const [initialized, setInitialized] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
-  const sessionIdRef = useRef<string>(generateSessionId());
+  const conversationHistoryRef = useRef<{ role: 'user' | 'assistant'; content: string }[]>([]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isTyping]);
+
+  useEffect(() => {
+    if (!isTyping && isOpen) {
+      inputRef.current?.focus();
+    }
+  }, [isTyping, isOpen]);
 
   const openChat = () => {
     setIsOpen(true);
@@ -39,6 +43,7 @@ export default function Chatbot() {
       setMessages([{ id: 1, text: t('greeting'), sender: 'bot' }]);
       setInitialized(true);
     }
+    setTimeout(() => inputRef.current?.focus(), 50);
   };
 
   const addBotMessage = (text: string, buttons?: { label: string; action: string }[]) => {
@@ -46,24 +51,6 @@ export default function Chatbot() {
       ...prev,
       { id: Date.now(), text, sender: 'bot', buttons },
     ]);
-  };
-
-  const pollForResponse = async (sessionId: string): Promise<void> => {
-    const maxAttempts = 45; // 45 × 1 s = 45 s timeout (Make.com has a 40 s webhook limit)
-    for (let i = 0; i < maxAttempts; i++) {
-      await new Promise((r) => setTimeout(r, 1000));
-      try {
-        const res = await fetch(`/api/chat/response?sessionId=${sessionId}`);
-        const data = await res.json();
-        if (data.message) {
-          addBotMessage(data.message, data.buttons ?? undefined);
-          return;
-        }
-      } catch {
-        // network hiccup — keep polling
-      }
-    }
-    addBotMessage(t('responses.default'));
   };
 
   const sendMessage = async () => {
@@ -78,26 +65,28 @@ export default function Chatbot() {
     setInput('');
     setIsTyping(true);
 
+    conversationHistoryRef.current = [
+      ...conversationHistoryRef.current,
+      { role: 'user', content: messageText },
+    ];
+
     try {
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: messageText, sessionId: sessionIdRef.current }),
+        body: JSON.stringify({ messages: conversationHistoryRef.current }),
       });
 
       if (!res.ok) throw new Error('API error');
 
       const data = await res.json();
+      const replyText: string = data.message ?? t('responses.default');
 
-      if (data.message) {
-        // Synchronous reply from Make.com
-        addBotMessage(data.message, data.buttons ?? undefined);
-      } else if (data.pending) {
-        // Async mode: poll until Make.com posts the reply
-        await pollForResponse(data.sessionId);
-      } else {
-        throw new Error('Unexpected response');
-      }
+      addBotMessage(replyText);
+      conversationHistoryRef.current = [
+        ...conversationHistoryRef.current,
+        { role: 'assistant', content: replyText },
+      ];
     } catch {
       addBotMessage(t('responses.default'));
     } finally {
@@ -222,6 +211,7 @@ export default function Chatbot() {
                 className="flex gap-2"
               >
                 <input
+                  ref={inputRef}
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
