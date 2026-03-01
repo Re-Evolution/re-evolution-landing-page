@@ -93,21 +93,26 @@ export async function POST(req: NextRequest) {
     parsed = { message: rawContent || 'Desculpe, ocorreu um erro. Tente novamente.' };
   }
 
-  // When lead data is collected, notify via Make.com (fire-and-forget)
+  // When lead data is collected, notify via Make.com (awaited to avoid Vercel early termination)
   if (parsed.lead?.name && parsed.lead?.contact) {
     const webhookUrl = process.env.MAKE_WEBHOOK_URL;
     if (webhookUrl) {
-      fetch(webhookUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: parsed.lead.name,
-          contact: parsed.lead.contact,
-          interest: parsed.lead.interest ?? '',
-          timestamp: new Date().toISOString(),
-          source: 'chatbot',
-        }),
-      }).catch(console.error);
+      try {
+        await fetch(webhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: parsed.lead.name,
+            contact: parsed.lead.contact,
+            interest: parsed.lead.interest ?? '',
+            timestamp: new Date().toISOString(),
+            source: 'chatbot',
+          }),
+          signal: AbortSignal.timeout(5_000),
+        });
+      } catch (e) {
+        console.error('Make.com webhook failed:', e);
+      }
     }
   }
 
