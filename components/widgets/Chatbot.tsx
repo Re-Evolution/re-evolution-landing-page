@@ -25,6 +25,9 @@ export default function Chatbot() {
   const conversationHistoryRef = useRef<{ role: 'user' | 'assistant'; content: string }[]>([]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const webhookFiredRef = useRef(false);
+  const pendingLeadRef = useRef<object | null>(null);
+  const inactivityTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -35,6 +38,44 @@ export default function Chatbot() {
       inputRef.current?.focus();
     }
   }, [isTyping, isOpen]);
+
+  // Case 3: window/tab close — send whatever data was collected
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      if (pendingLeadRef.current && !webhookFiredRef.current) {
+        webhookFiredRef.current = true;
+        const blob = new Blob([JSON.stringify(pendingLeadRef.current)], { type: 'application/json' });
+        navigator.sendBeacon('/api/notify', blob);
+      }
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, []);
+
+  const fireNotify = async (leadData: object) => {
+    if (webhookFiredRef.current) return;
+    webhookFiredRef.current = true;
+    if (inactivityTimerRef.current) clearTimeout(inactivityTimerRef.current);
+    try {
+      await fetch('/api/notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(leadData),
+      });
+    } catch {
+      // silent — data was already stored in pendingLeadRef
+    }
+  };
+
+  const resetInactivityTimer = () => {
+    if (inactivityTimerRef.current) clearTimeout(inactivityTimerRef.current);
+    // Case 2: 3 min of inactivity — send whatever was collected
+    inactivityTimerRef.current = setTimeout(() => {
+      if (pendingLeadRef.current && !webhookFiredRef.current) {
+        fireNotify(pendingLeadRef.current);
+      }
+    }, 3 * 60 * 1000);
+  };
 
   const openChat = () => {
     setIsOpen(true);
@@ -87,6 +128,27 @@ export default function Chatbot() {
         ...conversationHistoryRef.current,
         { role: 'assistant', content: replyText },
       ];
+
+      // Always update pending lead with the latest data from AI
+      if (data.lead) {
+        pendingLeadRef.current = data.lead;
+      }
+
+      // Case 1: all 8 fields confirmed — fire once and never again
+      if (data.leadReady && data.lead) {
+        fireNotify(data.lead);
+      }
+
+      // Case 3.1: client said goodbye — fire with whatever data exists, then reset for potential new conversation
+      if (data.goodbye && pendingLeadRef.current && !webhookFiredRef.current) {
+        fireNotify(pendingLeadRef.current).then(() => {
+          // Reset so a new conversation after goodbye can trigger a new notification
+          webhookFiredRef.current = false;
+          pendingLeadRef.current = null;
+        });
+      }
+
+      resetInactivityTimer();
     } catch {
       addBotMessage(t('responses.default'));
     } finally {
