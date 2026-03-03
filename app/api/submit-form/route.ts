@@ -147,6 +147,7 @@ export async function POST(req: NextRequest) {
     await transporter.sendMail({
       from: `"Re-Evolution" <${process.env.SMTP_USER}>`,
       to: email,
+      bcc: process.env.SMTP_USER,
       subject,
       html,
     });
