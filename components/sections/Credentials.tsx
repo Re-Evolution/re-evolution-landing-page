@@ -6,10 +6,9 @@ import { GraduationCap } from 'lucide-react';
 import { staggerContainer, staggerItem, viewportConfig } from '@/lib/animations';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 
-/* ------------------------------------------------------------------ */
-/* Inline SVG icons for each technology (grayscale by default,        */
-/* color on hover via parent group)                                   */
-/* ------------------------------------------------------------------ */
+/* ─────────────────────────────────────────────────────────────────── */
+/* Inline SVG icons (clean vectors — used when no brand file exists)  */
+/* ─────────────────────────────────────────────────────────────────── */
 
 function NextjsIcon({ className }: { className?: string }) {
   return (
@@ -27,10 +26,11 @@ function TailwindIcon({ className }: { className?: string }) {
   );
 }
 
+/* Vercel: official black triangle mark */
 function VercelIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 116 100" fill="currentColor">
-      <path d="M57.5 0L115 100H0L57.5 0z" />
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M24 22.525H0l12-21.05 12 21.05z" />
     </svg>
   );
 }
@@ -44,47 +44,31 @@ function CloudflareIcon({ className }: { className?: string }) {
   );
 }
 
-function MakeIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 64 64" fill="currentColor">
-      <path d="M32 4C16.536 4 4 16.536 4 32s12.536 28 28 28 28-12.536 28-28S47.464 4 32 4zm-6 38V22l18 10-18 10z" />
-    </svg>
-  );
-}
-
-function ZapierIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 64 64" fill="currentColor">
-      <path d="M41.6 22.4H52L32 52 12 22.4h10.4L32 38.4l9.6-16zM32 12l12.8 7.2H19.2L32 12z" />
-    </svg>
-  );
-}
-
-function ClaudeIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 64 64" fill="currentColor">
-      <path d="M32 6C17.64 6 6 17.64 6 32s11.64 26 26 26 26-11.64 26-26S46.36 6 32 6zm0 4c12.15 0 22 9.85 22 22s-9.85 22-22 22-22-9.85-22-22 9.85-22 22-22zm-8 14a3 3 0 100 6 3 3 0 000-6zm16 0a3 3 0 100 6 3 3 0 000-6zm-16.5 11a.75.75 0 00-.65 1.13C25.06 40.65 28.3 43 32 43s6.94-2.35 9.15-5.87a.75.75 0 00-.65-1.13h-17z" />
-    </svg>
-  );
-}
-
 function VSCodeIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 100 100" fill="currentColor">
-      <path d="M74.9 98l22.6-10.8V12.8L74.9 2 34.2 35.4 14.3 20.1 2.5 24.5v51l11.8 4.4L34.2 64.6 74.9 98zM71 74.6l-26-20.1L71 34.4v40.2zM14.3 60.1V39.9L27.6 50 14.3 60.1z" />
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z" />
     </svg>
   );
 }
 
-const techItems: { key: string; icon: React.ComponentType<{ className?: string }>; color: string }[] = [
-  { key: 'nextjs', icon: NextjsIcon, color: 'text-black' },
-  { key: 'tailwind', icon: TailwindIcon, color: 'text-[#06B6D4]' },
-  { key: 'vercel', icon: VercelIcon, color: 'text-black' },
-  { key: 'cloudflare', icon: CloudflareIcon, color: 'text-[#F48120]' },
-  { key: 'make', icon: MakeIcon, color: 'text-[#6D00CC]' },
-  { key: 'zapier', icon: ZapierIcon, color: 'text-[#FF4A00]' },
-  { key: 'claude', icon: ClaudeIcon, color: 'text-[#D97757]' },
-  { key: 'vscode', icon: VSCodeIcon, color: 'text-[#007ACC]' },
+/* ─────────────────────────────────────────────────────────────────── */
+/* Tech items — type 'svg' uses inline component, 'img' uses the file */
+/* ─────────────────────────────────────────────────────────────────── */
+
+type SvgItem  = { key: string; type: 'svg'; icon: React.ComponentType<{ className?: string }>; color: string };
+type ImgItem  = { key: string; type: 'img'; src: string; wide?: boolean };
+type TechItem = SvgItem | ImgItem;
+
+const techItems: TechItem[] = [
+  { key: 'nextjs',     type: 'svg', icon: NextjsIcon,    color: 'text-black'      },
+  { key: 'tailwind',   type: 'svg', icon: TailwindIcon,  color: 'text-[#06B6D4]' },
+  { key: 'vercel',     type: 'svg', icon: VercelIcon,    color: 'text-[#000000]' },
+  { key: 'cloudflare', type: 'svg', icon: CloudflareIcon,color: 'text-[#F48120]' },
+  { key: 'make',       type: 'img', src: '/icons/make.svg'                        },
+  { key: 'zapier',     type: 'img', src: '/icons/zapier.svg'                      },
+  { key: 'claude',     type: 'img', src: '/icons/claude.svg'                      },
+  { key: 'vscode',     type: 'svg', icon: VSCodeIcon,    color: 'text-[#007ACC]' },
 ];
 
 export default function Credentials() {
@@ -139,18 +123,37 @@ export default function Credentials() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          {techItems.map(({ key, icon: Icon, color }) => (
+          {techItems.map((item) => (
             <motion.div
-              key={key}
+              key={item.key}
               variants={staggerItem}
               className="group flex flex-col items-center gap-2"
-              title={t(`technologies.${key}`)}
+              title={t(`technologies.${item.key}`)}
             >
-              <div className={`w-16 h-16 bg-white shadow-sm rounded-xl border border-border flex items-center justify-center ${color} group-hover:grayscale group-hover:opacity-60 transition-all duration-300 p-3`}>
-                <Icon className="w-full h-full" />
+              <div
+                className={[
+                  'bg-white shadow-sm rounded-xl border border-border',
+                  'flex items-center justify-center',
+                  'group-hover:grayscale group-hover:opacity-60 transition-all duration-300',
+                  item.type === 'svg'
+                    ? `w-16 h-16 ${item.color} p-3`
+                    : item.wide
+                      ? 'h-14 w-36 p-3 overflow-hidden'   /* wide wordmark (Make.com) */
+                      : 'w-16 h-16 p-1.5 overflow-hidden', /* square icon (Zapier, Claude) */
+                ].join(' ')}
+              >
+                {item.type === 'svg' ? (
+                  <item.icon className="w-full h-full" />
+                ) : (
+                  <img
+                    src={item.src}
+                    alt={t(`technologies.${item.key}`)}
+                    className="w-full h-full object-contain rounded-lg"
+                  />
+                )}
               </div>
               <span className="text-xs text-text-secondary text-center max-w-[80px]">
-                {t(`technologies.${key}`).split(' - ')[0]}
+                {t(`technologies.${item.key}`).split(' - ')[0]}
               </span>
             </motion.div>
           ))}
